@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare Hackathon</title>
+    <link rel="stylesheet" href="css/hackathon.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Înregistrare Hackathon 2026</h1>
+            <p>Completează formularul pentru a te înscrie la cel mai mare hackathon al anului!</p>
+            <a href="index.html" class="back-link">← Înapoi la pagina principală</a>
+        </div>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Nume -->
+            <div class="form-group">
+                <label for="nume">Nume complet <span class="required">*</span></label>
+                <input type="text" id="nume" name="nume" required minlength="3" placeholder="Introdu numele tău complet">
+            </div>
+
+            <!-- Parolă -->
+            <div class="form-group">
+                <label for="parola">Parolă <span class="required">*</span></label>
+                <input type="password" id="parola" name="parola" required minlength="6" placeholder="Minim 6 caractere">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="exemplu@email.com">
+            </div>
+
+            <!-- Data nașterii -->
+            <div class="form-group">
+                <label for="dataNasterii">Data nașterii <span class="required">*</span></label>
+                <input type="date" id="dataNasterii" name="dataNasterii" required>
+            </div>
+
+            <!-- Selectare oraș -->
+            <div class="form-group">
+                <label for="oras">Oraș <span class="required">*</span></label>
+                <select id="oras" name="oras" required>
+                    <option value="">Selectează orașul</option>
+                    <option value="bucuresti">București</option>
+                    <option value="cluj">Cluj-Napoca</option>
+                    <option value="timisoara">Timișoara</option>
+                    <option value="iasi">Iași</option>
+                    <option value="brasov">Brașov</option>
+                    <option value="constanta">Constanța</option>
+                    <option value="craiova">Craiova</option>
+                </select>
+            </div>
+
+            <!-- Domenii de interes -->
+            <div class="form-group">
+                <label>Domenii de interes <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ai" name="domenii" value="ai">
+                        <label for="ai">Inteligență Artificială</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="web" name="domenii" value="web">
+                        <label for="web">Dezvoltare Web</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="mobile" name="domenii" value="mobile">
+                        <label for="mobile">Aplicații Mobile</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="blockchain" name="domenii" value="blockchain">
+                        <label for="blockchain">Blockchain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="iot" name="domenii" value="iot">
+                        <label for="iot">Internet of Things</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cybersecurity" name="domenii" value="cybersecurity">
+                        <label for="cybersecurity">Cybersecurity</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tip participant -->
+            <div class="form-group">
+                <label>Tip participant <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="student" name="tipParticipant" value="student" required>
+                        <label for="student">Student</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="profesor" name="tipParticipant" value="profesor">
+                        <label for="profesor">Profesor</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="altul" name="tipParticipant" value="altul">
+                        <label for="altul">Altul</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Încărcare CV -->
+            <div class="form-group">
+                <label for="cv">Încărcare CV (PDF, DOC, DOCX) <span class="required">*</span></label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <!-- Descriere personală -->
+            <div class="form-group">
+                <label for="descriere">Descriere personală</label>
+                <textarea id="descriere" name="descriere" rows="5" placeholder="Spune-ne mai multe despre tine, experiența ta și de ce vrei să participi la acest hackathon..."></textarea>
+            </div>
+
+            <!-- Butoane -->
+            <div class="form-buttons">
+                <button type="submit" class="btn-submit">✓ Trimite înregistrarea</button>
+                <button type="reset" class="btn-reset">↻ Resetează formularul</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

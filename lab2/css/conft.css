@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: white;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 3px solid #333;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Marquee */
+marquee {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+marquee img {
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.back-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    background: white;
+    color: #000;
+}
+
+/* Secțiune prezentare */
+.presentation {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    border: 2px solid #000;
+}
+
+.presentation h2 {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+
+.presentation p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Highlight pentru cuvinte cheie */
+.highlight {
+    background: #000;
+    color: white;
+    padding: 2px 8px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Secțiune hartă imagini */
+.image-map-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    border: 2px solid #000;
+}
+
+.image-map-section h2 {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.image-map-section > p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.map-container {
+    text-align: center;
+    position: relative;
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+/* Secțiuni explicative */
+.zones-info {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.zone-card {
+    background: white;
+    padding: 30px;
+    border: 2px solid #000;
+    transition: all 0.3s;
+}
+
+.zone-card:hover {
+    background: #f0f0f0;
+}
+
+.zone-card:target {
+    background: #e0e0e0;
+    border: 3px solid #000;
+}
+
+.zone-card h3 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.zone-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.zone-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.zone-card ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+}
+
+.zone-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 3px solid #333;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .presentation,
+    .image-map-section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .presentation h2,
+    .image-map-section h2 {
+        font-size: 22px;
+    }
+
+    marquee {
+        font-size: 14px;
+    }
+
+    .zones-info {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .zone-card {
+        padding: 20px;
+    }
+}
+
+/* Animații */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.presentation,
+.image-map-section,
+.zone-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Animație de highlight pentru zone clickate */
+@keyframes highlightPulse {
+    0%, 100% {
+        border: 2px solid #000;
+    }
+    50% {
+        border: 3px solid #000;
+        background: #d0d0d0;
+    }
+}
+
+.zone-card.highlight-zone {
+    animation: highlightPulse 0.6s ease-in-out 2;
+    background: #e0e0e0;
+    border: 3px solid #000;
+}
