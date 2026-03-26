@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercitiul 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n1 = prompt("Introduceți prima notă:");
+        var n2 = prompt("Introduceți a doua notă:");
+
+        if (n1 === null || n2 === null || n1 === "" || n2 === "" || isNaN(n1) || isNaN(n2)) {
+            document.write("Date invalide!");
+        } else {
+            var nota1 = Number(n1);
+            var nota2 = Number(n2);
+            var media = (nota1 + nota2) / 2;
+
+            document.write("Media aritmetică este: " + media + "<br>");
+
+            if (media < 5) {
+                document.write("Respins");
+            } else {
+                document.write("Promovat");
+            }
+        }
+    </script>
+</body>
+</html>

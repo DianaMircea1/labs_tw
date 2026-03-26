@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercițiul 3</title>
+    <script type="text/javascript">
+        function afiseazaMesajBautura() {
+            let bautura = prompt("Care este băutura ta preferată?", "Coca-Cola");
+            let mesaj = "";
+
+            switch (bautura) {
+                case "Coca-Cola":
+                    mesaj = "Coca-Cola este o alegere energizantă!";
+                    break;
+                case "Pepsi":
+                    mesaj = "Pepsi este o alternativă clasică la Coca-Cola.";
+                    break;
+                case "Sprite":
+                    mesaj = "Sprite este o băutură potrivită pentru zilele călduroase.";
+                    break;
+                case "Fanta":
+                    mesaj = "Fanta este o alegere plină de aromă de portocale.";
+                    break;
+                default:
+                    mesaj = "Interesantă alegere ...";
+            }
+
+            document.getElementById("rezultat").innerHTML = mesaj;
+        }
+    </script>
+</head>
+<body>
+
+    <h3>Utilizăm metoda prompt()</h3>
+    
+    <button onclick="afiseazaMesajBautura()">Apasă-mă!</button>
+
+    <p id="rezultat"></p>
+
+</body>
+</html>

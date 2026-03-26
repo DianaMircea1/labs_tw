@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercițiul 1</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        let nume = prompt("Introduceți numele utilizatorului:");
+
+        if (nume === null || nume === "") {
+            alert("Introduceți numele!");
+        } else {
+            let varsta = prompt("Introduceți vârsta utilizatorului:");
+
+            if (varsta === null || varsta === "" || isNaN(varsta)) {
+                alert("Vârsta trebuie să fie un număr!");
+            } else {
+                let varstaNumerica = Number(varsta);
+
+                if (varstaNumerica < 18) {
+                    alert("Minor");
+                } 
+                else {
+                    alert("Adult");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
