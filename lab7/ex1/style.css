@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: left;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.feedback-box {
+    margin: 20px 0;
+    padding: 10px;
+    min-height: 24px;
+    display: none;
+    /* Ascuns până la prima validare */
+    align-items: center;
+}
+
+/* Stil pentru când ghicește corect (ca în imagine) */
+.success {
+    display: flex;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.success::before {
+    content: '✅';
+    margin-right: 10px;
+}
+
+.stats {
+    margin-top: 20px;
+    font-size: 18px;
+}

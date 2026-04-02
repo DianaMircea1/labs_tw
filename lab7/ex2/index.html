@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulator Magazin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="shop-container">
+        <h1>Simulator magazin</h1>
+
+        <div class="form-group">
+            <input type="text" id="pName" placeholder="Nume produs">
+            <input type="text" id="pPrice" placeholder="Preț">
+            <input type="text" id="pQuantity" placeholder="Cantitate">
+
+            <div class="button-row">
+                <button id="addBtn">Adaugă produs</button>
+                <button id="clearBtn">Golește coș</button>
+            </div>
+        </div>
+
+        <div id="error-message" class="error"></div>
+
+        <div class="results-section">
+            <h3>Produse:</h3>
+            <div id="productList"></div>
+
+            <h3>Total:</h3>
+            <p id="grandTotal">TOTAL GENERAL: 0 lei</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

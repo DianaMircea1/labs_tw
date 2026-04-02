@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc: Ghicește Numărul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Ghicește numărul (1 - 100)</h1>
+
+        <div class="input-section">
+            <input type="number" id="userInput" placeholder="Introdu un număr..." min="1" max="100">
+            <button id="checkBtn">Ghicește</button>
+            <button id="restartBtn">Restart</button>
+        </div>
+
+        <div id="feedback" class="feedback-box"></div>
+
+        <div class="stats">
+            <p><strong>Încercări:</strong> <span id="attemptsCount">0</span></p>
+            <p><strong>Istoric:</strong> <span id="historyList"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
