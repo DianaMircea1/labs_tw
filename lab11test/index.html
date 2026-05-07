@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simulare descărcare</title>
+    <style>
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .info {
+            color: blue;
+        }
+
+        .done {
+            color: green;
+        }
+
+        .panel {
+            width: 220px;
+            height: 100px;
+            border: 2px solid gray;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .loading {
+            background-color: purple;
+        }
+
+        .loading-text {
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% {
+                content: '';
+            }
+            40% {
+                content: '.';
+            }
+            60% {
+                content: '..';
+            }
+            80%, 100% {
+                content: '...';
+            }
+        }
+</style>
+</head>
+
+<body>
+    <button id="downloadBtn">Descarcă fișier</button>
+    <p id="status"></p>
+    <div class="panel">
+        Descărcare fișier
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
